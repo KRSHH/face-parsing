@@ -33,7 +33,6 @@ def main():
             break
 
         image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-        image = cv2.resize(image, (512, 512))
         image_batch = prepare_image(image).to(device)
 
         with torch.no_grad():
